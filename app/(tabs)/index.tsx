@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import CircleHolder from "../../components/CircleHolder";
@@ -30,6 +30,9 @@ const index = () => {
           </CircleHolder>
         </View>
       </View>
+      <ScrollView style={chatStyles.chatContainer}>
+        <Text style={chatStyles.headText}>Messages</Text>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -39,11 +42,11 @@ export default index;
 const styles = StyleSheet.create({
   container: {
     paddingTop: 5,
+    flex: 1,
   },
   header: {
     width: "100%",
-    // backgroundColor: "red",
-    height: 50,
+    height: 40,
   },
   headContentHolder: {
     flex: 1,
@@ -51,6 +54,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 10,
+  },
+});
+
+const chatStyles = StyleSheet.create({
+  chatContainer: {
+    flex: 1,
+    paddingHorizontal: 10,
+    paddingTop: 5,
+  },
+  headText: {
+    fontSize: 35,
+    fontWeight: "700",
   },
 });
 

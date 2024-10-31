@@ -77,7 +77,7 @@ const Tab: React.FC<BottomTabBarProps> = ({
               style={{
                 width: 32,
                 height: 32,
-                tintColor: isFocused ? "#000000" : "#aaaaaa",
+                tintColor: isFocused ? "#242424" : "#aaaaaa",
               }}
             />
             {/* <Text

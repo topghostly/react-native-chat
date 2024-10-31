@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { ReactNode } from "react";
 
 interface propsinterface {
@@ -9,7 +9,7 @@ interface propsinterface {
 
 const CircleHolder: React.FC<propsinterface> = ({ width, children, color }) => {
   return (
-    <View
+    <TouchableOpacity
       style={{
         width,
         aspectRatio: 1,
@@ -20,7 +20,7 @@ const CircleHolder: React.FC<propsinterface> = ({ width, children, color }) => {
       }}
     >
       {children}
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -1,4 +1,11 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import CircleHolder from "../../components/CircleHolder";
@@ -18,7 +25,7 @@ const index = () => {
               }}
             />
           </CircleHolder>
-          <CircleHolder width={35} color="#014bac">
+          <CircleHolder width={33} color="#d0bd9c">
             <Image
               source={icons.add}
               resizeMode="contain"
@@ -31,7 +38,25 @@ const index = () => {
         </View>
       </View>
       <ScrollView style={chatStyles.chatContainer}>
-        <Text style={chatStyles.headText}>Messages</Text>
+        <View style={chatStyles.header}>
+          <Text style={chatStyles.headText}>Messages</Text>
+          <TouchableOpacity style={chatStyles.archieve}>
+            <Image
+              source={icons.archieve}
+              style={{
+                width: 4,
+                aspectRatio: 1,
+              }}
+            />
+            <Text
+              style={{
+                color: "black",
+              }}
+            >
+              Archieve Chat
+            </Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -46,7 +71,7 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: 40,
+    height: 45,
   },
   headContentHolder: {
     flex: 1,
@@ -58,6 +83,18 @@ const styles = StyleSheet.create({
 });
 
 const chatStyles = StyleSheet.create({
+  header: {
+    height: 45,
+    backgroundColor: "red",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+  archieve: {
+    backgroundColor: "blue",
+    height: 40,
+    flexShrink: 1,
+  },
   chatContainer: {
     flex: 1,
     paddingHorizontal: 10,
@@ -72,3 +109,4 @@ const chatStyles = StyleSheet.create({
 // color: #041a7d
 // Theme color: #014bac
 // Gray color: #cecece
+// New color: #d0bd9c

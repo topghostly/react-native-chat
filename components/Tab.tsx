@@ -58,10 +58,11 @@ const Tab: React.FC<BottomTabBarProps> = ({
               {
                 justifyContent: "center",
                 alignItems: "center",
-                borderRadius: 25,
+                borderRadius: 100,
+                aspectRatio: 1,
                 paddingHorizontal: 12,
                 borderCurve: "continuous",
-                // backgroundColor: isFocused ? "black" : null,
+                backgroundColor: isFocused ? "#d0bd9c" : null,
                 paddingVertical: 8,
               } as ViewStyle
             }
@@ -75,8 +76,8 @@ const Tab: React.FC<BottomTabBarProps> = ({
             <Image
               source={route.name === "settings" ? icons.settings : icons.chat}
               style={{
-                width: 32,
-                height: 32,
+                width: 28,
+                height: 28,
                 tintColor: isFocused ? "#242424" : "#aaaaaa",
               }}
             />
@@ -107,13 +108,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#dfdfdf",
-    width: 250,
     left: "50%",
-    transform: [{ translateX: -125 }],
-    // paddingHorizontal: 2,
+    transform: [{ translateX: -80 }],
+    paddingHorizontal: 3,
     paddingVertical: 3,
-    borderRadius: 20,
+    borderRadius: 100,
     borderCurve: "continuous",
+    gap: 30,
   },
   tabButtons: {
     backgroundColor: "white",

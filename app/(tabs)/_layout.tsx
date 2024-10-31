@@ -18,7 +18,7 @@ const TabsLayout = () => {
       }}
     >
       <Tabs.Screen
-        name="chats"
+        name="index"
         options={{
           title: "Chat",
           headerShown: false,

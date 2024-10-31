@@ -75,12 +75,12 @@ const Tab: React.FC<BottomTabBarProps> = ({
             <Image
               source={route.name === "settings" ? icons.settings : icons.chat}
               style={{
-                width: 33,
-                height: 33,
+                width: 32,
+                height: 32,
                 tintColor: isFocused ? "#000000" : "#aaaaaa",
               }}
             />
-            <Text
+            {/* <Text
               style={{
                 color: isFocused ? "#000000" : "#aaaaaa",
                 fontFamily: "NeueMontreal-Medium",
@@ -89,7 +89,7 @@ const Tab: React.FC<BottomTabBarProps> = ({
               }}
             >
               {route.name}
-            </Text>
+            </Text> */}
           </TouchableOpacity>
         );
       })}
@@ -102,7 +102,7 @@ export default Tab;
 const styles = StyleSheet.create({
   tabContainer: {
     position: "absolute",
-    bottom: 5,
+    bottom: 10,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -110,8 +110,8 @@ const styles = StyleSheet.create({
     width: 250,
     left: "50%",
     transform: [{ translateX: -125 }],
-    paddingHorizontal: 6,
-    paddingVertical: 6,
+    // paddingHorizontal: 2,
+    paddingVertical: 3,
     borderRadius: 20,
     borderCurve: "continuous",
   },

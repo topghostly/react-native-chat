@@ -58,7 +58,7 @@ const Tab: React.FC<BottomTabBarProps> = ({
               {
                 justifyContent: "center",
                 alignItems: "center",
-                borderRadius: 100,
+                borderRadius: 20,
                 aspectRatio: 1,
                 paddingHorizontal: 12,
                 borderCurve: "continuous",
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     transform: [{ translateX: -80 }],
     paddingHorizontal: 3,
     paddingVertical: 3,
-    borderRadius: 100,
+    borderRadius: 20,
     borderCurve: "continuous",
     gap: 30,
   },

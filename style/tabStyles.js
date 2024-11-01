@@ -18,10 +18,10 @@ const tabStyle = StyleSheet.create({
   },
 
   textHeader: {
-    height: 45,
     alignItems: "flex-end",
     justifyContent: "space-between",
     flexDirection: "row",
+    paddingVertical: 5,
   },
   headText: {
     fontSize: 33,

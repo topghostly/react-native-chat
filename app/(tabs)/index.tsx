@@ -11,6 +11,7 @@ import React from "react";
 import CircleHolder from "../../components/CircleHolder";
 import { icons } from "../../constant";
 import tabStyle from "../../style/tabStyles";
+import ChatDetails from "../../components/tabComponents/ChatDetails";
 
 const index = () => {
   return (
@@ -61,6 +62,18 @@ const index = () => {
             </Text>
           </TouchableOpacity>
         </View>
+        <View style={chatStyles.chatHolder}>
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+          <ChatDetails />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -88,6 +101,9 @@ const chatStyles = StyleSheet.create({
   chatContainer: {
     flex: 1,
     paddingHorizontal: 10,
+    paddingTop: 5,
+  },
+  chatHolder: {
     paddingTop: 5,
   },
 });

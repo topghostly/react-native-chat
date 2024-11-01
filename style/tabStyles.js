@@ -24,7 +24,7 @@ const tabStyle = StyleSheet.create({
     paddingVertical: 5,
   },
   headText: {
-    fontSize: 33,
+    fontSize: 35,
     fontFamily: "Poppins-SemiBold",
   },
 });

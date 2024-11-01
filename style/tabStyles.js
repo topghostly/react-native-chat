@@ -24,8 +24,8 @@ const tabStyle = StyleSheet.create({
     flexDirection: "row",
   },
   headText: {
-    fontSize: 35,
-    fontWeight: "700",
+    fontSize: 33,
+    fontFamily: "Poppins-SemiBold",
   },
 });
 

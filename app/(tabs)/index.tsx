@@ -53,6 +53,7 @@ const index = () => {
             <Text
               style={{
                 color: "black",
+                fontFamily: "Poppins-Medium",
                 fontSize: 16,
               }}
             >

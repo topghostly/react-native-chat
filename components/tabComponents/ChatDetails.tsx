@@ -13,8 +13,8 @@ const ChatDetails: React.FC<chatDetailsProps> = () => {
             source={icons.avatar}
             resizeMode="contain"
             style={{
-              width: 55,
-              height: 55,
+              width: 60,
+              height: 60,
             }}
           />
         </View>
@@ -22,6 +22,20 @@ const ChatDetails: React.FC<chatDetailsProps> = () => {
         {/* Chat name and last message sent preview */}
         <View style={styles.chatNameHolder}>
           <Text style={styles.chatName}>Judy Bense</Text>
+          <Text
+            style={styles.lastMessage}
+            numberOfLines={2}
+            ellipsizeMode="tail"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nostrum
+            rerum quae quod nam neque asperiores repellendus corporis
+            voluptates.
+          </Text>
+        </View>
+
+        {/* Last notification part */}
+        <View style={styles.timeDateNotification}>
+          <Text style={styles.chatTime}>02:45</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -40,18 +54,38 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     gap: 10,
   },
+
+  // Chat image style
   imageHolder: {
-    width: 55,
+    width: 60,
     aspectRatio: 1,
     borderRadius: 100,
   },
-  // Style for name and last messgae holder
 
+  // Style for name and last messgae holder
   chatNameHolder: {
     paddingVertical: 2,
+    flex: 1,
   },
   chatName: {
     fontFamily: "Poppins-SemiBold",
     fontSize: 18,
+  },
+  lastMessage: {
+    fontSize: 15,
+    color: "#8f8f8f",
+    fontFamily: "Poppins-Medium",
+  },
+
+  // Notification part
+  timeDateNotification: {
+    width: 40,
+    alignItems: "flex-end",
+    // justifyContent: "to",
+  },
+  chatTime: {
+    fontSize: 15,
+    fontFamily: "Poppins-Medium",
+    color: "#8f8f8f",
   },
 });

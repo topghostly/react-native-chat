@@ -1,10 +1,21 @@
 import { StyleSheet, Text, View } from "react-native";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-
+import { useFonts } from "expo-font";
 import React from "react";
 
+SplashScreen.preventAutoHideAsync(); // Prevent Splachscreen from exit before stuffs load
+
 const RootLayout = () => {
+  // Laod fonts
+  const [fontsLoaded, error] = useFonts({
+    "Poppins-Bold": require("../assets/fonts/popins/Poppins-Bold.ttf"),
+    "Poppins-Light": require("../assets/fonts/popins/Poppins-Light.ttf"),
+    "Poppins-Medium": require("../assets/fonts/popins/Poppins-Medium.ttf"),
+    "Poppins-Regular": require("../assets/fonts/popins/Poppins-Regular.ttf"),
+    "Poppins-SemiBold": require("../assets/fonts/popins/Poppins-SemiBold.ttf"),
+    // "Poppins-LightItalic": require("../assets/popins/fonts/Italic.ttf"),
+  });
   return (
     <>
       <Stack>
